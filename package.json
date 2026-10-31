@@ -1,0 +1,21 @@
+{
+  "name": "aastha-pasrija-portfolio",
+  "version": "1.0.0",
+  "description": "Award-winning minimalist software engineer portfolio for Aastha Pasrija",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "ai-ml",
+    "react",
+    "nextjs",
+    "deep-learning",
+    "computer-vision"
+  ],
+  "author": "Aastha Pasrija",
+  "license": "MIT"
+}

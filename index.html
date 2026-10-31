@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aastha Pasrija — Software Engineer | AI/ML &amp; Full-Stack</title>
+  
+  <meta name="description" content="Portfolio of Aastha Pasrija, an award-winning Software Engineer specializing in Machine Learning, Deep Learning, Computer Vision, Generative AI, and Modern Web Development.">
+  <meta name="keywords" content="Aastha Pasrija, Software Engineer, AI, ML, Machine Learning, Deep Learning, Computer Vision, Generative AI, React, Next.js, TypeScript, Python">
+  <meta name="author" content="Aastha Pasrija">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aastha Pasrija — Software Engineer">
+  <meta property="og:description" content="Award-winning minimalist software engineer portfolio with cutting-edge AI/ML and full-stack systems.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Preload Hero Video for Instantaneous Fast Loading -->
+  <link rel="preload" href="./Herro section.mp4" as="video" type="video/mp4">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Navigation Bar
+       ========================================================================= -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-brand-logo">AP</div>
+        <span class="nav-brand-name">AASTHA PASRIJA</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#academics" class="nav-link">Academics</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Theme">
+          <span id="theme-toggle-icon"></span>
+        </button>
+
+        <!-- CTA Link -->
+        <a href="#contact" class="nav-cta-btn">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav" class="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#academics">Academics</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- =========================================================================
+       2. Hero Section with Full-Screen Background Video
+       ========================================================================= -->
+  <section id="hero" class="hero-section">
+    <!-- Full-screen Background Video & Overlay -->
+    <div class="hero-video-bg-container">
+      <video 
+        id="hero-video" 
+        class="hero-video-bg"
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture
+        disableremoteplayback
+        preload="auto"
+      >
+        <source src="./Herro section.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Floating Audio & Fullscreen Controls (Bottom Right) -->
+    <div class="hero-floating-controls">
+      <button id="video-audio-toggle" class="video-ctrl-btn" aria-label="Toggle Audio">
+        <span id="video-audio-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </span>
+        <span id="video-audio-label">Unmute</span>
+      </button>
+
+      <button id="video-fullscreen-btn" class="video-ctrl-btn" aria-label="Expand Fullscreen">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Centered Content -->
+    <div class="container hero-container">
+      <div class="hero-content">
+        <!-- Main Title -->
+        <h1 class="hero-title">
+          Hi, I'm <span class="hero-title-highlight">Aastha Pasrija</span>.<br>
+          Building Intelligent Systems.
+        </h1>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span>View My Projects</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <img src="assets/icons/github.svg" alt="GitHub" class="btn-icon">
+            <span>GitHub Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Wheel -->
+    <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content">
+      <span class="scroll-wheel"></span>
+    </a>
+  </section>
+
+  <!-- =========================================================================
+       About Me Section
+       ========================================================================= -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="title-accent-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Story & Engineering Pillars -->
+        <div class="about-story-col">
+          <div class="about-story-card">
+            <p class="about-lead">
+              I am a Software Engineer dedicated to architecting scalable, production-grade applications and pushing the frontiers of applied Artificial Intelligence. My work bridges deep learning research with robust full-stack engineering.
+            </p>
+            <p class="about-body">
+              From designing computer vision pipelines and generative multi-agent workflows in PyTorch and OpenCV, to constructing responsive, type-safe web systems in Next.js, React, and TypeScript, I emphasize clean architecture, high throughput, and intuitive user experiences.
+            </p>
+
+            <div class="about-highlights-row">
+              <div class="about-highlight-pill">
+                <span class="highlight-bullet"></span>
+                <span>B.Tech in CSE (9.2 CGPA)</span>
+              </div>
+              <div class="about-highlight-pill">
+                <span class="highlight-bullet"></span>
+                <span>Deep Learning &amp; Computer Vision</span>
+              </div>
+              <div class="about-highlight-pill">
+                <span class="highlight-bullet"></span>
+                <span>Modern Full-Stack Systems</span>
+              </div>
+            </div>
+
+            <div class="about-pillars">
+              <div class="about-pillar">
+                <div class="pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Machine Learning &amp; AI Systems</h4>
+                  <p class="pillar-desc">Custom CNNs, edge-optimized inference pipelines, YOLO detection, and multi-agent LLM systems.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar">
+                <div class="pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Full-Stack Architecture</h4>
+                  <p class="pillar-desc">React &amp; Next.js SSR, type-safe TypeScript backends, relational SQL schema design, and microservices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Stacked Photo Cards (Cards Coming Out Effect) -->
+        <div class="about-photo-col">
+          <div class="photo-cards-deck" id="photo-deck" title="Hover to fan cards • Click to cycle">
+            <!-- Floating Fan Hint -->
+            <div class="photo-deck-hint">Hover to Fan Cards</div>
+
+            <!-- Card 3 (Back: Executive Light Blue Suit) -->
+            <div class="stacked-photo-card card-3" data-card="3">
+              <div class="stacked-photo-inner">
+                <img src="assets/photo_blue_suit.png" alt="Aastha Pasrija — Software Engineer" class="stacked-photo-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Card 2 (Middle: Formal Black Suit) -->
+            <div class="stacked-photo-card card-2" data-card="2">
+              <div class="stacked-photo-inner">
+                <img src="assets/photo_suit_formal.png" alt="Aastha Pasrija — Software Engineer" class="stacked-photo-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Card 1 (Front: Warm Sunlight Portrait) -->
+            <div class="stacked-photo-card card-1" data-card="1">
+              <div class="stacked-photo-inner">
+                <img src="assets/photo_suit_sunlight.png" alt="Aastha Pasrija — Software Engineer" class="stacked-photo-img" loading="eager">
+              </div>
+            </div>
+
+            <!-- Floating Executive Badge -->
+            <div class="about-photo-badge">
+              <span class="status-pulse-dot"></span>
+              <span class="badge-text">Open to Software Engineering &amp; AI Roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. Skills Section
+       ========================================================================= -->
+  <section id="skills" class="section">
+    <span id="toolkit" style="position: absolute; top: -85px;"></span>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Skills</h2>
+        <div class="title-accent-line"></div>
+        <p class="section-subtitle" style="margin-top: 0.85rem;">
+          Core proficiencies spanning artificial intelligence, deep learning research, and modern full-stack web engineering.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="toolkit-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Skills (12)</button>
+        <button class="filter-btn" data-filter="LANG">Languages (LANG)</button>
+        <button class="filter-btn" data-filter="AI/ML">AI &amp; Machine Learning (AI/ML)</button>
+        <button class="filter-btn" data-filter="DEV">Web &amp; Dev Tools (DEV)</button>
+      </div>
+
+      <!-- Toolkit Grid Cards -->
+      <div class="toolkit-grid">
+        <!-- 1. Python [LANG] -->
+        <div class="toolkit-card" data-category="LANG">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/python.svg" alt="Python Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Python</h3>
+          <span class="toolkit-badge badge-lang">LANG</span>
+        </div>
+
+        <!-- 2. C [LANG] -->
+        <div class="toolkit-card" data-category="LANG">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/c.svg" alt="C Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">C</h3>
+          <span class="toolkit-badge badge-lang">LANG</span>
+        </div>
+
+        <!-- 3. C++ [LANG] -->
+        <div class="toolkit-card" data-category="LANG">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/cpp.svg" alt="C++ Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">C++</h3>
+          <span class="toolkit-badge badge-lang">LANG</span>
+        </div>
+
+        <!-- 2. Machine Learning [AI/ML] -->
+        <div class="toolkit-card" data-category="AI/ML">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/ml.svg" alt="Machine Learning Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Machine Learning</h3>
+          <span class="toolkit-badge badge-aiml">AI/ML</span>
+        </div>
+
+        <!-- 3. Deep Learning [AI/ML] -->
+        <div class="toolkit-card" data-category="AI/ML">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/deeplearning.svg" alt="Deep Learning Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Deep Learning</h3>
+          <span class="toolkit-badge badge-aiml">AI/ML</span>
+        </div>
+
+        <!-- 4. Computer Vision [AI/ML] -->
+        <div class="toolkit-card" data-category="AI/ML">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/computervision.svg" alt="Computer Vision Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Computer Vision</h3>
+          <span class="toolkit-badge badge-aiml">AI/ML</span>
+        </div>
+
+        <!-- 5. Generative AI [AI/ML] -->
+        <div class="toolkit-card" data-category="AI/ML">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/genai.svg" alt="Generative AI Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Generative AI</h3>
+          <span class="toolkit-badge badge-aiml">AI/ML</span>
+        </div>
+
+        <!-- 6. React [DEV] -->
+        <div class="toolkit-card" data-category="DEV">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/react.svg" alt="React Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">React</h3>
+          <span class="toolkit-badge badge-dev">DEV</span>
+        </div>
+
+        <!-- 7. Next.js [DEV] -->
+        <div class="toolkit-card" data-category="DEV">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/nextjs.svg" alt="Next.js Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Next.js</h3>
+          <span class="toolkit-badge badge-dev">DEV</span>
+        </div>
+
+        <!-- 8. TypeScript [DEV] -->
+        <div class="toolkit-card" data-category="DEV">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/typescript.svg" alt="TypeScript Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">TypeScript</h3>
+          <span class="toolkit-badge badge-dev">DEV</span>
+        </div>
+
+        <!-- 9. SQL [DEV] -->
+        <div class="toolkit-card" data-category="DEV">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/sql.svg" alt="SQL Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">SQL</h3>
+          <span class="toolkit-badge badge-dev">DEV</span>
+        </div>
+
+        <!-- 10. Git [DEV] -->
+        <div class="toolkit-card" data-category="DEV">
+          <div class="toolkit-icon-wrap">
+            <img src="assets/icons/git.svg" alt="Git Icon" class="toolkit-icon">
+          </div>
+          <h3 class="toolkit-name">Git</h3>
+          <span class="toolkit-badge badge-dev">DEV</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Projects Section (Two Projects In A Row Slider)
+       ========================================================================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Real-world intelligent applications built with end-to-end craftsmanship. Displayed two projects per view in an interactive slider.
+        </p>
+      </div>
+
+      <!-- Slider Component (Two Projects In A Row) -->
+      <div class="projects-slider-container">
+        <!-- Top Controls: Counter & Arrow Navigation -->
+        <div class="slider-controls-top">
+          <div class="slider-counter">
+            <span id="slider-current-num" class="slider-counter-current">01</span> / <span id="slider-total-num">02</span>
+          </div>
+
+          <div class="slider-nav-btns">
+            <button id="slider-prev" class="slider-btn" aria-label="Previous Projects">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button id="slider-next" class="slider-btn" aria-label="Next Projects">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Slider Viewport Track -->
+        <div class="slider-viewport">
+          <div id="project-slider-track" class="slider-track">
+            
+            <!-- Project 1: NeuralVision AI -->
+            <article class="project-card">
+              <div class="project-thumb-box">
+                <img src="assets/projects/project-1.svg" alt="NeuralVision AI Interface" class="project-thumb-img">
+                <span class="project-tag-pill">AI/ML • COMPUTER VISION</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">NeuralVision AI</h3>
+                <p class="project-desc">
+                  Edge-optimized computer vision platform featuring real-time multi-object tracking, spatial boundary detection, and sub-5ms TensorRT inference pipelines.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">Python</span>
+                  <span class="stack-tag">OpenCV</span>
+                  <span class="stack-tag">PyTorch</span>
+                  <span class="stack-tag">FastAPI</span>
+                  <span class="stack-tag">React</span>
+                </div>
+                <div class="project-footer-links">
+                  <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-github">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: AgenticFlow Studio -->
+            <article class="project-card">
+              <div class="project-thumb-box">
+                <img src="assets/projects/project-2.svg" alt="AgenticFlow Studio Interface" class="project-thumb-img">
+                <span class="project-tag-pill">AI/ML • GENERATIVE AI</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">AgenticFlow Studio</h3>
+                <p class="project-desc">
+                  Autonomous multi-agent orchestration engine utilizing vector embeddings, semantic RAG retrieval, and dynamic sandboxed Python tool execution.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">Next.js</span>
+                  <span class="stack-tag">TypeScript</span>
+                  <span class="stack-tag">Python</span>
+                  <span class="stack-tag">LangChain</span>
+                  <span class="stack-tag">Tailwind</span>
+                </div>
+                <div class="project-footer-links">
+                  <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-github">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: OmniPulse Cloud -->
+            <article class="project-card">
+              <div class="project-thumb-box">
+                <img src="assets/projects/project-3.svg" alt="OmniPulse Cloud Interface" class="project-thumb-img">
+                <span class="project-tag-pill">DEV • FULL-STACK</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">OmniPulse Cloud</h3>
+                <p class="project-desc">
+                  High-throughput distributed cluster telemetry and SQL metrics dashboard handling 1.4M events/sec with sub-millisecond query aggregation.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React</span>
+                  <span class="stack-tag">TypeScript</span>
+                  <span class="stack-tag">SQL</span>
+                  <span class="stack-tag">Node.js</span>
+                  <span class="stack-tag">WebSockets</span>
+                </div>
+                <div class="project-footer-links">
+                  <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-github">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: DeepScan Health -->
+            <article class="project-card">
+              <div class="project-thumb-box">
+                <img src="assets/projects/project-4.svg" alt="DeepScan Health Interface" class="project-thumb-img">
+                <span class="project-tag-pill">AI/ML • DEEP LEARNING</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">DeepScan Health</h3>
+                <p class="project-desc">
+                  Convolutional neural network diagnostic system for medical MRI scans using Grad-CAM saliency visualizations and achieving 0.994 AUC-ROC.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">Python</span>
+                  <span class="stack-tag">PyTorch</span>
+                  <span class="stack-tag">Scikit-Learn</span>
+                  <span class="stack-tag">Docker</span>
+                  <span class="stack-tag">Next.js</span>
+                </div>
+                <div class="project-footer-links">
+                  <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-github">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div id="slider-dots" class="slider-pagination-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Academic Background Section (Straight-Line Alternating Timeline)
+       ========================================================================= -->
+  <section id="academics" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-subtitle">
+          Strong academic foundations in computer science, mathematical rigor, and artificial intelligence research.
+        </p>
+      </div>
+
+      <!-- Straight-Line Alternating Timeline -->
+      <div class="academics-timeline-wrap">
+        <div class="timeline-center-line"></div>
+
+        <!-- 1. B.Tech (Left) -->
+        <div class="timeline-item item-left">
+          <div class="timeline-node">
+            <span class="timeline-node-dot"></span>
+          </div>
+          <div class="academic-card">
+            <div class="academic-card-header">
+              <div>
+                <span class="timeline-year-tag">2021 — 2025</span>
+                <h3 class="degree-title">Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</h3>
+                <p class="institution-name">Specialization in Artificial Intelligence &amp; Machine Learning</p>
+              </div>
+              <div class="academic-score-pill">
+                <span>CGPA: 9.2 / 10.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Class XII (Right) -->
+        <div class="timeline-item item-right">
+          <div class="timeline-node">
+            <span class="timeline-node-dot"></span>
+          </div>
+          <div class="academic-card">
+            <div class="academic-card-header">
+              <div>
+                <span class="timeline-year-tag">2019 — 2021</span>
+                <h3 class="degree-title">Senior Secondary Schooling (Class XII)</h3>
+                <p class="institution-name">Central Board of Secondary Education (CBSE)</p>
+              </div>
+              <div class="academic-score-pill">
+                <span>Score: 95.4%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Class X (Left) -->
+        <div class="timeline-item item-left">
+          <div class="timeline-node">
+            <span class="timeline-node-dot"></span>
+          </div>
+          <div class="academic-card">
+            <div class="academic-card-header">
+              <div>
+                <span class="timeline-year-tag">2017 — 2019</span>
+                <h3 class="degree-title">Secondary Schooling (Class X)</h3>
+                <p class="institution-name">High School Foundation</p>
+              </div>
+              <div class="academic-score-pill">
+                <span>CGPA: 10.0 / 10.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Contact Section
+       ========================================================================= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+        <p class="section-subtitle">
+          Have an exciting project, full-time engineering opportunity, or AI initiative? Drop me a line anytime.
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Direct Info Column -->
+        <div class="contact-info-col">
+          <!-- Email Card with Copy Feature -->
+          <div class="contact-card">
+            <h3 class="contact-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>Email Address</span>
+            </h3>
+            <p class="contact-card-desc">Preferred method for software engineering inquiries and research discussions.</p>
+            <div class="contact-email-box">
+              <span id="contact-email-val" class="contact-email-text">aasthapasrija23@gmail.com</span>
+              <button id="copy-email-btn" class="copy-email-btn" title="Copy to clipboard">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Location & Availability Card -->
+          <div class="contact-card">
+            <h3 class="contact-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Location &amp; Availability</span>
+            </h3>
+            <p class="contact-card-desc">
+              Based in India • Available for Remote worldwide and on-site engineering roles.
+            </p>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-emerald);">
+              <span class="hero-status-dot" style="margin: 0;"></span>
+              <span>Available immediately</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="contact-form-col">
+          <form id="contact-form" action="https://formsubmit.co/aasthapasrija23@gmail.com" method="POST">
+            <!-- FormSubmit Anti-Spam & Configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Portfolio Message for Aastha Pasrija">
+
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Hunter" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Your Email</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Software Engineer Opportunity / Project Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Describe your vision, opportunity, or timeline..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Footer Section
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">AASTHA PASRIJA</div>
+          <p class="footer-brand-tagline">Software Engineer • AI/ML &amp; Full-Stack Architect</p>
+        </div>
+
+        <!-- Social Media Links (Vibrant & Clearly Visible) -->
+        <div class="footer-social-links">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/aastha-pasrija-57233b346/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="social-svg">
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Aasthapasrija2522" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+            <img src="assets/icons/github.svg" alt="GitHub" class="social-svg">
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:aasthapasrija23@gmail.com" class="social-icon-btn" title="Email Aastha">
+            <img src="assets/icons/mail.svg" alt="Email" class="social-svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Pop-up -->
+  <div id="toast-notice" class="toast-notice" role="alert">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Message sent successfully!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
