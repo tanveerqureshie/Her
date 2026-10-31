@@ -39,9 +39,7 @@ An award-winning, minimalist software engineering portfolio built for **Aastha P
 
 5. **Academic Background**:
    - Timeline cards featuring:
-     - **B.Tech in Computer Science & Engineering** (AI & ML Specialization, CGPA `9.2 / 10.0`, Dean's Honors List).
-     - **Senior Secondary Schooling (Class XII)** (CBSE, `95.4%`, Science & Math Distinction).
-     - **Secondary Schooling (Class X)** (High School, `10.0 / 10.0` CGPA).
+     - **B.Tech in Computer Science & Engineering** (AI & ML Specialization, CGPA `9.2 / 10.0`, Bvcoe New Delhi)
 
 6. **Interactive Contact Page**:
    - Direct contact cards (Location, Availability, and Email with a 1-click clipboard copy button).
